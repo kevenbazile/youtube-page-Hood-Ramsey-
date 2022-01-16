@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">You Hungry?</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class= contact.html
+      </div>
+    </header>
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>THE HOOD<br><span>RAMSEY SHOW</span></h1>
+        <p>What it do I'm Hood Ramsey. Who Am I you ask well I'm a Brooklyn Born and raised in the hood. Growing up there was not many options to eat from but most importantly i was picky with what i ate. Being from a very private and secluded background i never got a chance to try out alot of food. i had ketchup for the first time two years ago, never had mayo or any white sauce, never had mustard i could go on but i do not even know the names of things i haven't tried so i am on a journey and you guys are going to pick the food and i'll rate and let you know if its worth trying and for what occassion to get the most out of your time out.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Bobby Fwae<br><span>in the house</span></h1>
+        <p> This Bobby Fwae i work with you guys to show my brother what good food is out there. he is super picky but i have more experience eating a variety of food so i know what to pick for myself. If you ever need some food guide come to our show to knw whats in your area and our ratings</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Mission Statement<br><span>Team Goals</sollpan></h1>
+        <p>Our Goal on this journey is three things: we want to show you guys food areas near you that you may have never heard of and could give a shot. we also want to work with small business's during this time to use our platform to raise awareness of these small businesses covid-19 impacted alot of businesses so i aim to bring awareness to them whether a good or bad review we just want to show our love and appreciation for every meal. and lastly with our platform we plan to feed the less fortunate and give back to the community every chance we get; life is hard so we just want to be the people who show others that you can count on us to help you out the best we can.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Stay Tuned<br><span>Together</span></h1>
+        <p>There are alot of places and things that we have in store for our fans we just want you guys to be vocal and send in your places you think we should try and keep in mind you are helping others who do not know it doesnt matter if it is in the USA or in China Hood Ramsey and Bobby Fwae will be the judge of the food. Have fun, Be respectful, Share food photos and experiences and show love by subscribing to the channel and following our social media on all platforms thank you!</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Food Hood Ramsey<br><span>don't like (my opinion)</span></h1>
+        <p>ketchup although i do not remeber the taste it was not to good, mediterranean food from coney island in brooklyn it was dookie, the passion fruit bubble tea on coney island. Come to think of it coney island producing hot poop in the food department step it up. this is a update on my most hated food i'll keep you posted. 8.24.21 HR approved. </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
